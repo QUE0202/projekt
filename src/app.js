@@ -5,6 +5,7 @@ const hbs = require('hbs');
 const app = express();
 
 app.set('views', './src/views');
+hbs.registerPartials(path.join(__dirname, 'views/particals'));
 app.set('view engine', 'hbs');
 
 app.get('/', (req, res) => {
